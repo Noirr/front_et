@@ -1,16 +1,16 @@
             <!-- ####### Left sidebar ####### -->
             <div class="col-md-3">
-                               
-                <!-- Facebook -->                       
+
+                <!-- Facebook -->
                 <div class="card mb-4 et-card-ad">
                     <img class="card-img" src="img/fb.png" alt="">
                 </div>
-                   
-                <!-- Square ad -->                       
+
+                <!-- Square ad -->
                 <div class="card mb-4 et-card-ad">
                     <img class="card-img" src="img/300x250.png" alt="">
                 </div>
-                
+
                 <!-- Sidebar latest videos header -->
                 <h2 class="text-uppercase et-sidebar-title">Najnowsze video</h2>
 
@@ -24,11 +24,11 @@
                     if( !empty($video[4]) ){$card->show( $video[4] ); }
                 ?>
 
-                   
-                <!-- Horizontal ad -->                       
+
+                <!-- Horizontal ad -->
                 <div class="card mb-4 et-card-ad">
                     <img class="card-img" src="img/300x600.png" alt="">
                 </div>
-                    
+
             </div>
             <!-- ####### End of Left sidebar ####### -->

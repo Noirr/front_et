@@ -1,8 +1,11 @@
 <?php
 
-    define( 'BACK_URL', 'http://noirweb.hekko24.pl/portal_et' );   
-    define( 'API_URL', BACK_URL.'/wp-json/wp/v2/' );
-    define( 'SITE_URL', 'http://127.0.0.1/www/Kompro-ET/front_et/panel.php' );
+    define( 'BACK_URL', 'http://207.154.216.4/panel' );
+    define( 'API_URL', BACK_URL.'/index.php/wp-json/wp/v2/' );
+    define( 'SITE_URL', 'http://207.154.216.4' );
+    
+    define( 'API_LOGIN', 'root' );
+    define( 'API_PASSWORD', '160645' );
 
     define( 'PER_PAGE', 8 );
 
@@ -12,6 +15,6 @@
         "titter_link" => "-- titter LINK --",
         "mail_link" => "-- mail LINK --",
     );
-    
+
 
 ?>

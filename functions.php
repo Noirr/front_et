@@ -17,7 +17,7 @@
     {
         echo "<br><div><pre>";
         print_r( $txt );
-        echo "<br><div><pre>";
+        echo "<br></div></pre>";
     } 
     function polish_month( $n )
     {   

@@ -49,6 +49,46 @@ class DATA
 		$count = count( $list );
 		return $count;
 	}
+	public function create_post($post, $file)
+	{
+		printuj($post);
+		printuj($file);
+		
+
+		$username = API_LOGIN;
+		$password = API_PASSWORD;
+		$rest_api_url = API_URL."posts";
+
+		$data_string = json_encode([
+			'title'    => $post["title"],
+			'status'   => 'draft',
+			//'featured_media' => $images[$rand_key]
+		]);
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $rest_api_url);
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+
+		curl_setopt($ch, CURLOPT_HTTPHEADER, [
+			'Content-Type: application/json',
+			'Content-Length: ' . strlen($data_string),
+			'Authorization: Basic ' . base64_encode($username . ':' . $password),
+			'Content-Disposition: attachment; filename='.$file["file"]["name"],
+		]);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+		$result = curl_exec($ch);
+
+		curl_close($ch);
+
+		if ($result) {
+			printuj($result);
+			echo $result;
+		} else {
+			echo "NIE UDALO SIE:";
+		}
+	}
 
 }
 

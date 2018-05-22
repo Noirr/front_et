@@ -8,7 +8,7 @@
         public function ads_small()
         {
             echo '
-                 <!-- Square ad -->                       
+                 <!-- Square ad -->
                     <div class="card mb-4 et-card-ad">
                         <img class="card-img" src="img/300x250.png" alt="">
                     </div>
@@ -21,7 +21,7 @@
             //$data->get_single("comment", );
             return "1";
         }
-        
+
         public function show( $obj )
         {
 
@@ -38,7 +38,7 @@
 
             $cat_field = '';
             $data_field = '';
-            if( !empty($obj['type']) ) 
+            if( !empty($obj['type']) )
             {
                 $cat_field = '<a class="card-link text-lowercase text-white et-card-category-news" href="#">'.$obj['type'].'</a>';
             }
@@ -64,7 +64,7 @@
             $featuremedia = new MEDIA( $obj['featured_media']  );
             $cat_field = '';
             $data_field = '';
-            if( !empty($obj['type']) ) 
+            if( !empty($obj['type']) )
             {
                 $cat_field = '<a class="card-link text-lowercase text-white et-card-category-news" href="#">'.$obj['type'].'</a>';
             }
@@ -92,14 +92,14 @@
             echo '
             <!-- Big card -->
             <div class="card bg-dark text-white et-card">
-                <img class="card-img" 
-                src="'.$featuremedia->data["guid"]["rendered"].'" 
+                <img class="card-img"
+                src="'.$featuremedia->data["guid"]["rendered"].'"
                 alt="'.$featuremedia->data["title"]["rendered"].'"
                 >
                 <div class="card-img-overlay">
                     <h3 class="card-title et-card-title">'.$obj["title"]["rendered"].'</h3>
                     <p class="card-text et-card-date">
-                        '.$this->date( $obj['date'] ).' 
+                        '.$this->date( $obj['date'] ).'
                         <i class="fas fa-comment et-card-comments"></i>
                         <span class="et-card-comments-number">'.$this->count_comments( $obj['id'] ).'</span>
                     </p>
@@ -109,7 +109,7 @@
             ';
         }*/
 
-        
+
         public function date( $date )
         {
             $y = substr($date, 0, 4);
